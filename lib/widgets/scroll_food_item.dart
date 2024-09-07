@@ -47,20 +47,22 @@ class _scroll_FoodState extends State<scroll_Food> {
           child: Stack(
             children: [
               Positioned(
-                left: 5,
-                top: 5,
-                child: Container(
-                  margin: EdgeInsets.only(top: 20, left: 11, right: 5),
-                  height: 220,
-                  width: MediaQuery.of(context).size.width * 0.86,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: Image.asset(
-                      food_images[index],
-                      fit: BoxFit.cover,
+                left: 2,
+                top: 1,
+                child: Center(
+                  child: Container(
+                    margin: EdgeInsets.only(top: 20, left: 15, right: 0),
+                    height: 220,
+                    width: MediaQuery.of(context).size.width * 0.86,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image.asset(
+                        food_images[index],
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
@@ -81,7 +83,7 @@ class _scroll_FoodState extends State<scroll_Food> {
                       children: [
                         SizedBox(height: 5),
                         Padding(
-                          padding: const EdgeInsets.only(left: 12, top: 5, bottom: 6),
+                          padding: const EdgeInsets.only(left: 10, top: 5, bottom: 6),
                           child: bigtext_20_w400(text: "Sanjay Fast Food", textcolor: Colors.black),
                         ),
                         Row(
@@ -129,7 +131,9 @@ class _scroll_FoodState extends State<scroll_Food> {
         children: [
           Expanded(
             child: ScrollSnapList(
+              margin: EdgeInsets.only(left: 0,right: 0),
               itemBuilder: _buildItemList,
+              duration: 500,
               itemSize: MediaQuery.of(context).size.width * 0.95,
               dynamicItemSize: true,
               onReachEnd: () {

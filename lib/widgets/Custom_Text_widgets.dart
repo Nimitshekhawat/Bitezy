@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:bitezy/utils/Colors/All_Colors.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 Widget bigtext_20_w400(
@@ -13,7 +14,7 @@ Widget bigtext_20_w400(
 
 }){
   return Text(
-    text,style:GoogleFonts.roboto(fontSize: size ?? 20,color:textcolor ?? all_colors.mainColor,fontWeight: weight?? FontWeight.w400),overflow: TextOverflow.ellipsis,
+    text,style:GoogleFonts.roboto(fontSize: size ?? 20,color:textcolor ?? Colors.black,fontWeight: weight?? FontWeight.w400),overflow: TextOverflow.ellipsis,
   );
 }
 Widget small_text_15_w400(
